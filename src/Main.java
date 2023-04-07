@@ -27,19 +27,18 @@ public class Main {
             }
         }
     }
-    public static void calculateTimeToDeliver(int deliveryDistance) {
-        int daysToDeliver = 1;
+    public static int calculateTimeToDeliver(int deliveryDistance) {
+        int counter = 1;
         if (deliveryDistance > 20) {
-            daysToDeliver++;
+            counter++;
         }
         if (deliveryDistance > 60) {
-            daysToDeliver++;
+            counter++;
         }
         if (deliveryDistance > 100) {
-            System.out.println("Доставка не осуществляется");
-            return;
+            return -1;
         }
-        System.out.println("Потребуется дней: " + daysToDeliver);
+        return counter;
 
     }
 
@@ -59,7 +58,7 @@ public class Main {
     public static void task3() {
         System.out.println("Задача 3");
         int deliveryDistance = 77;
-        calculateTimeToDeliver(deliveryDistance);
+        System.out.println("Потребуется дней: " + calculateTimeToDeliver(deliveryDistance));
 
     }
 

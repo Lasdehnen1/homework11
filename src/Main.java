@@ -57,8 +57,10 @@ public class Main {
 
     public static void task3() {
         System.out.println("Задача 3");
-        int deliveryDistance = 77;
-        System.out.println("Потребуется дней: " + calculateTimeToDeliver(deliveryDistance));
+        int days = calculateTimeToDeliver(5);
+        String deliveryInfo = days == -1 ? "Доставка не осуществляется" : String.format("Потребуется дней: %s", days);
+
+        System.out.println(deliveryInfo);
 
     }
 
